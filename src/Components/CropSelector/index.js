@@ -47,8 +47,6 @@ const CropSelector = ({history}) => {
       <TouchableOpacity
         style={styles.furtherButton}
         onPress={() => {
-          console.log('Clicked Items: ');
-          console.log(clicked);
           history.push('/dashboard');
         }}>
         <Text style={styles.furtherButtonText}>આગળ વધો</Text>

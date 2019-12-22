@@ -6,8 +6,9 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
+import {withRouter} from 'react-router-native';
 
-const LoginForm = () => {
+const LoginForm = ({history}) => {
   const [mobile, setMobile] = useState('');
   return (
     <View style={styles.loginFormContainer}>
@@ -19,7 +20,11 @@ const LoginForm = () => {
         style={styles.loginContainer}
         onChangeText={text => setMobile(text)}
       />
-      <TouchableOpacity style={styles.loginButton}>
+      <TouchableOpacity
+        onPress={() => {
+          history.push('/dashboard');
+        }}
+        style={styles.loginButton}>
         <Text style={styles.loginButtonText}>લોગ ઈન</Text>
       </TouchableOpacity>
     </View>
@@ -53,7 +58,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#7AD13F',
-    borderWidth: 1,
     borderRadius: 15,
     elevation: 3,
   },
@@ -65,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginForm;
+export default withRouter(LoginForm);

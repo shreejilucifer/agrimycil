@@ -19,6 +19,13 @@ export default function Title({type}) {
         </Text>
       </View>
     );
+  else if (type === 3)
+    return (
+      <View style={styles.titleContainerThree}>
+        <Text style={styles.titleThree}>એગ્રીમાઈસીલ</Text>
+        <Text style={styles.subtitleThree}>આણંદ</Text>
+      </View>
+    );
 }
 
 const styles = StyleSheet.create({
@@ -57,5 +64,21 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.16)',
     textShadowOffset: {width: 0, height: 5},
     textShadowRadius: 10,
+  },
+  titleContainerThree: {
+    position: 'absolute',
+    alignSelf: 'flex-end',
+    flex: 1,
+    paddingTop: 40,
+    paddingLeft: 10,
+    width: '65%',
+  },
+  titleThree: {
+    color: '#fff',
+    fontSize: 25,
+  },
+  subtitleThree: {
+    color: '#fff',
+    fontSize: 15,
   },
 });

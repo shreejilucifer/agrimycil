@@ -3,12 +3,14 @@ import {View, Image, StyleSheet} from 'react-native';
 
 import ManOne from '../../Images/man1.png';
 import ManTwo from '../../Images/man2.png';
+import ManThree from '../../Images/man3.png';
 
 const Human = ({type}) => {
   return (
     <View style={styles.humanContainer}>
       {type === 1 ? <Image source={ManOne} style={styles.human} /> : null}
       {type === 2 ? <Image source={ManTwo} style={styles.human} /> : null}
+      {type === 3 ? <Image source={ManThree} style={styles.human} /> : null}
     </View>
   );
 };

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {View, Image, StyleSheet, Keyboard} from 'react-native';
-import ellipseone from '../../Images/ellipse2.png';
+import ellipseone from '../../Images/ellipse.png';
 import ellipsetwo from '../../Images/ellipse2.png';
 
 const Footer = ({type}) => {
