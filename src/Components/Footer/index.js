@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {View, Image, StyleSheet, Keyboard} from 'react-native';
 import ellipseone from '../../Images/ellipse.png';
 import ellipsetwo from '../../Images/ellipse2.png';
+import ellipsethree from '../../Images/ellipse3.png';
 
 const Footer = ({type}) => {
   if (type === null || type === undefined) type = 1;
@@ -43,6 +44,14 @@ const Footer = ({type}) => {
         )}
       </View>
     );
+  else if (type === 3)
+    return (
+      <View style={styles.footerContainerThree}>
+        {isKeyboardVisible ? null : (
+          <Image source={ellipsethree} style={styles.footerThree} />
+        )}
+      </View>
+    );
 };
 
 const styles = StyleSheet.create({
@@ -61,6 +70,17 @@ const styles = StyleSheet.create({
     right: 0,
     marginBottom: -150,
     marginRight: -100,
+  },
+  footerContainerTwo: {
+    position: 'absolute',
+    zIndex: -1,
+    bottom: 0,
+    right: 0,
+    marginBottom: -150,
+    marginRight: -100,
+  },
+  footerThree: {
+    zIndex: -1,
   },
 });
 
