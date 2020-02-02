@@ -5,7 +5,7 @@ import backarrow from '../../Images/backarrow.png';
 
 const DashboardTitle = ({history, text, textStyle, back}) => {
   return (
-    <>
+    <React.Fragment>
       <View style={styles.container}>
         <Text style={[styles.title, textStyle]}>{text}</Text>
       </View>
@@ -25,7 +25,7 @@ const DashboardTitle = ({history, text, textStyle, back}) => {
         </View>
       ) : null}
       <View style={styles.seperator}></View>
-    </>
+    </React.Fragment>
   );
 };
 

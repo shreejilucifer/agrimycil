@@ -14,7 +14,7 @@ import Item from './Item';
 const CropSelector = ({history}) => {
   const [clicked, setClicked] = useState([]);
   return (
-    <>
+    <React.Fragment>
       <View style={styles.container}>
         <FlatList
           columnWrapperStyle={{justifyContent: 'space-between'}}
@@ -51,7 +51,7 @@ const CropSelector = ({history}) => {
         }}>
         <Text style={styles.furtherButtonText}>આગળ વધો</Text>
       </TouchableOpacity>
-    </>
+    </React.Fragment>
   );
 };
 

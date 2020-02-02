@@ -8,14 +8,14 @@ import ProductsPage from '../Pages/ProductsPage';
 import ProductDetailsPage from '../Pages/ProductDetailsPage';
 
 const Router = () => (
-  <NativeRouter>
-    <>
+  <NativeRouter initialEntries={['/product-details/edfwfd']}>
+    <React.Fragment>
       <Route exact path="/" component={LoginPage} />
       <Route path="/crop-selection" component={CropSelectionPage} />
       <Route path="/dashboard" component={DashboardPage} />
       <Route path="/products" component={ProductsPage} />
       <Route path="/product-details/:pid" component={ProductDetailsPage} />
-    </>
+    </React.Fragment>
   </NativeRouter>
 );
 
