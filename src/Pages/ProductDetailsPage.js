@@ -13,9 +13,10 @@ import LinearGradient from 'react-native-linear-gradient';
 import BackgroundEllipse from '../Components/Header/BackgroundEllipse';
 import logo from '../Images/logo.png';
 import buybtn from '../Images/buybtn.png';
+import backarrow from '../Images/backarrow.png';
 import trichomeal from '../Images/trichomeal.png';
 
-const Header = ({image, productName}) => {
+const Header = ({history, image, productName}) => {
   return (
     <View>
       <BackgroundEllipse type={2} />
@@ -23,6 +24,17 @@ const Header = ({image, productName}) => {
         <Image source={logo} style={styles.logo} />
         <Text style={styles.title}>{productName}</Text>
       </View>
+      <TouchableOpacity
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'flex-end',
+          marginRight: 20,
+        }}
+        onPress={() => history.goBack()}>
+        <Image source={backarrow} style={{marginRight: 10}} />
+        <Text style={styles.backBtn}>પાછળ</Text>
+      </TouchableOpacity>
       <View style={styles.humanContainer}>
         <Image source={image} />
       </View>
@@ -96,7 +108,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 0,
     top: 0,
-    marginTop: 20,
+    marginTop: 40,
     marginRight: 30,
   },
   seperator: {
@@ -124,13 +136,17 @@ const styles = StyleSheet.create({
     textShadowOffset: {width: 0, height: 5},
     textShadowRadius: 10,
   },
+  backBtn: {
+    color: '#3B76F6',
+    fontSize: 15,
+  },
   logo: {
     width: 100,
     height: 100,
   },
   dataContainer: {
     height: 350,
-    marginTop: 240,
+    marginTop: 220,
     marginLeft: 30,
     marginRight: 30,
     marginBottom: 20,
