@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, ScrollView, StyleSheet} from 'react-native';
 
-import Header from '../Components/Header/index';
+import Header from '../Components/Header/DashboardPage/index';
 import DashboardCard from '../Components/DashboardCard';
 
 import products from '../Images/products.png';

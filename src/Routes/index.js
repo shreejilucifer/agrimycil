@@ -8,7 +8,7 @@ import ProductsPage from '../Pages/ProductsPage';
 import ProductDetailsPage from '../Pages/ProductDetailsPage';
 
 const Router = () => (
-  <NativeRouter initialEntries={['/product-details/edfwfd']}>
+  <NativeRouter initialEntries={['/dashboard']}>
     <React.Fragment>
       <Route exact path="/" component={LoginPage} />
       <Route path="/crop-selection" component={CropSelectionPage} />

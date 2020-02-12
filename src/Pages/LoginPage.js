@@ -1,6 +1,6 @@
 import React from 'react';
 import {KeyboardAvoidingView} from 'react-native';
-import Header from '../Components/Header/index';
+import Header from '../Components/Header/LoginPage/index';
 import AuthForm from '../Components/AuthForm/index';
 import Footer from '../Components/Footer/index';
 
