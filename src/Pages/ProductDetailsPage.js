@@ -52,14 +52,16 @@ const Data = ({data}) => {
   );
 };
 
-const BuyButton = () => {
+const BuyButton = ({history}) => {
   return (
     <LinearGradient
       colors={['#E6355F', '#FAF954']}
       start={{x: 1, y: 1}}
       end={{x: 0, y: 1}}
       style={styles.buyButtonContainer}>
-      <TouchableOpacity style={{flexDirection: 'row', alignItems: 'center'}}>
+      <TouchableOpacity
+        onPress={() => console.log('Hello')}
+        style={{flexDirection: 'row', alignItems: 'center'}}>
         <Text style={styles.buynow}>ખરીદો</Text>
         <View style={styles.buybtnContainer}>
           <Image source={buybtn} />
@@ -69,11 +71,11 @@ const BuyButton = () => {
   );
 };
 
-const ProductDetailsPage = () => {
+const ProductDetailsPage = ({history}) => {
   let {pid} = useParams();
   return (
     <View style={styles.container}>
-      <Header image={trichomeal} productName="ટ્રાઈકોમીલ" />
+      <Header image={trichomeal} productName="ટ્રાઈકોમીલ" history={history} />
       <Data
         data="જેઓ ¢વ¢થતાǑૂવક પડો, જેથી તેઓ આનંદ મેળવવા માટે કામ કરʂ શકે અને દ: ખ, કેટલાક મહાન. ુ
 કારણ કે, જેમ આપણે સૌથી નાના વ¢Ǎુઓ સાથે આવે છે, જે અમે કેટલાક લાભ મેળવવા ɫસવાય, તે
@@ -159,7 +161,7 @@ const styles = StyleSheet.create({
     textAlign: 'justify',
   },
   buyButtonContainer: {
-    height: 50,
+    height: 60,
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-end',
