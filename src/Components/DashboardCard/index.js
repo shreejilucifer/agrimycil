@@ -12,14 +12,14 @@ const DashboardCard = ({history, gradient, link, title, img, imgstyle}) => {
         start={gradient.start}
         end={gradient.end}
         style={styles.container}>
-        <View style={{width: '75%'}}>
+        <View style={{width: '80%'}}>
           <Text style={styles.title}>{title}</Text>
           <Image source={arrow} style={styles.arrow} />
         </View>
         <View
           style={[
             {
-              width: '25%',
+              width: '20%',
               justifyContent: 'flex-end',
               alignItems: 'flex-end',
             },

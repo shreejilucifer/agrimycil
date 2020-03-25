@@ -12,7 +12,7 @@ import address from '../Images/address.png';
 const DashboardPage = () => {
   return (
     <View style={styles.container}>
-      <Header type={3} />
+      <Header />
       <ScrollView style={styles.cardsContainer}>
         <DashboardCard
           gradient={{

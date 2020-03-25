@@ -1,9 +1,11 @@
 import React from 'react';
 import {View} from 'react-native';
+
 import BackgroundEllipse from './BackgroundEllipse';
-import Title from './Title';
 import Human from './Human';
+import Title from './Title';
 import Logo from './Logo';
+import DashboardTitle from './DashboardTitle';
 
 const Header = () => {
   return (
@@ -12,6 +14,11 @@ const Header = () => {
       <Human />
       <Title />
       <Logo />
+      <DashboardTitle
+        text="અમારી ઉત્પાદનો 🛒"
+        textStyle={{width: '100%'}}
+        back
+      />
     </View>
   );
 };

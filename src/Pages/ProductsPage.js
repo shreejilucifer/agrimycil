@@ -1,13 +1,13 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 
-import Header from '../Components/Header/index';
+import Header from '../Components/Header/ProductsPage/index';
 import ProductSelector from '../Components/ProductSelector/index';
 
 const ProductsPage = () => {
   return (
     <View style={styles.container}>
-      <Header type={4} />
+      <Header />
       <ProductSelector />
     </View>
   );

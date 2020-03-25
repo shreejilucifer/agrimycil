@@ -1,19 +1,12 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  FlatList,
-  Image,
-  TouchableOpacity,
-  StyleSheet,
-} from 'react-native';
+import {View, FlatList, TouchableOpacity, StyleSheet} from 'react-native';
 import {withRouter} from 'react-router-native';
 import DATA from './data';
 import Item from './Item';
 
 const CropSelector = ({history}) => {
   return (
-    <>
+    <React.Fragment>
       <View style={styles.container}>
         <FlatList
           columnWrapperStyle={{justifyContent: 'space-between'}}
@@ -31,7 +24,7 @@ const CropSelector = ({history}) => {
           keyExtractor={item => item.id}
         />
       </View>
-    </>
+    </React.Fragment>
   );
 };
 

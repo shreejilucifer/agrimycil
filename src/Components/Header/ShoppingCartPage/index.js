@@ -1,17 +1,17 @@
 import React from 'react';
 import {View} from 'react-native';
+
 import BackgroundEllipse from './BackgroundEllipse';
-import Title from './Title';
 import Human from './Human';
-import Logo from './Logo';
+
+import DashboardTitle from './DashboardTitle';
 
 const Header = () => {
   return (
     <View style={{zIndex: -1}}>
       <BackgroundEllipse />
       <Human />
-      <Title />
-      <Logo />
+      <DashboardTitle back />
     </View>
   );
 };
