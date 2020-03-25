@@ -1,12 +1,12 @@
 import React from 'react';
-import {View, Image, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 
-import ManThree from '../../../Images/man3.png';
+import Man3 from '../../../Images/man3';
 
 const Human = () => {
   return (
     <View style={styles.humanContainer}>
-      <Image source={ManThree} style={styles.human} />
+      <Man3 />
     </View>
   );
 };

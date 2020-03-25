@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import buybtn from '../../Images/buybtn.png';
+import BuyBtn from '../../Images/buybtn';
 
 export const Data = ({data}) => {
   return (
@@ -31,7 +31,7 @@ export const BuyButton = ({history}) => {
         style={{flexDirection: 'row', alignItems: 'center'}}>
         <Text style={styles.buynow}>ખરીદો</Text>
         <View style={styles.buybtnContainer}>
-          <Image source={buybtn} />
+          <BuyBtn />
         </View>
       </TouchableOpacity>
     </LinearGradient>

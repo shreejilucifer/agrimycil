@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
   logoContainer: {
     position: 'absolute',
     left: 0,
-    marginTop: 150,
+    marginTop: 130,
+    marginLeft: 30,
   },
 });
 

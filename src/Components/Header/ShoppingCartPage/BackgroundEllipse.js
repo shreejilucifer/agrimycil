@@ -1,12 +1,12 @@
 import React from 'react';
-import {StyleSheet, View, Image} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
-import EllipseThree from '../../../Images/ellipse3.png';
+import EllipseThree from '../../../Images/ellipse3';
 
 const BackgroundEllipse = () => {
   return (
     <View>
-      <Image source={EllipseThree} style={styles.ellipseThree} />
+      <EllipseThree style={styles.ellipseThree} />
     </View>
   );
 };

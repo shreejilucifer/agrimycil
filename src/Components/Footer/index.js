@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {View, Image, StyleSheet, Keyboard} from 'react-native';
-import ellipseone from '../../Images/ellipse.png';
-import ellipsetwo from '../../Images/ellipse2.png';
-import ellipsethree from '../../Images/ellipse3.png';
-import ellipsefour from '../../Images/ellipse4.png';
+import EllipseOne from '../../Images/ellipse';
+import EllipseTwo from '../../Images/ellipse2';
+import EllipseThree from '../../Images/ellipse3';
+import EllipseFour from '../../Images/ellipse4';
 
 const Footer = ({type}) => {
   if (type === null || type === undefined) type = 1;
@@ -32,25 +32,19 @@ const Footer = ({type}) => {
   if (type === 1)
     return (
       <View style={styles.footerContainer}>
-        {isKeyboardVisible ? null : (
-          <Image source={ellipseone} style={styles.footer} />
-        )}
+        {isKeyboardVisible ? null : <EllipseOne />}
       </View>
     );
   else if (type === 2)
     return (
       <View style={styles.footerContainerTwo}>
-        {isKeyboardVisible ? null : (
-          <Image source={ellipsetwo} style={styles.footer} />
-        )}
+        {isKeyboardVisible ? null : <EllipseTwo />}
       </View>
     );
   else if (type === 3)
     return (
       <View style={styles.footerContainerThree}>
-        {isKeyboardVisible ? null : (
-          <Image source={ellipsethree} style={styles.footerThree} />
-        )}
+        {isKeyboardVisible ? null : <EllipseThree />}
       </View>
     );
   else if (type === 4)
@@ -58,7 +52,7 @@ const Footer = ({type}) => {
       <View style={styles.footerContainerFour}>
         {isKeyboardVisible ? null : (
           <React.Fragment>
-            <Image source={ellipsefour} style={styles.footerFour} />
+            <EllipseFour />
           </React.Fragment>
         )}
       </View>

@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {withRouter} from 'react-router-native';
 import LinearGradient from 'react-native-linear-gradient';
-import arrow from '../../Images/arrow.png';
+import Arrow from '../../Images/arrow.js';
 
 const DashboardCard = ({history, gradient, link, title, img, imgstyle}) => {
   return (
@@ -14,7 +14,7 @@ const DashboardCard = ({history, gradient, link, title, img, imgstyle}) => {
         style={styles.container}>
         <View style={{width: '80%'}}>
           <Text style={styles.title}>{title}</Text>
-          <Image source={arrow} style={styles.arrow} />
+          <Arrow />
         </View>
         <View
           style={[
@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
   arrow: {
     marginTop: 10,
     marginLeft: 10,
+    elevation: 5,
   },
 });
 

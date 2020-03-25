@@ -1,12 +1,12 @@
 import React from 'react';
-import {StyleSheet, View, Image} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
-import EllipseOne from '../../../Images/ellipse.png';
+import Ellipseone from '../../../Images/ellipse';
 
 const BackgroundEllipse = () => {
   return (
     <View>
-      <Image source={EllipseOne} style={styles.ellipseOne} />
+      <Ellipseone style={styles.ellipse} />
     </View>
   );
 };
@@ -16,6 +16,13 @@ const styles = StyleSheet.create({
     marginTop: -120,
     marginLeft: -100,
     width: '150%',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+  },
+  ellipse: {
+    marginTop: -110,
+    marginLeft: -30,
     position: 'absolute',
     top: 0,
     left: 0,

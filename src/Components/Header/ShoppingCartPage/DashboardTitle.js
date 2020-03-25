@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import {withRouter} from 'react-router-native';
-import backarrow from '../../../Images/backarrow.png';
-import cart from '../../../Images/cart.png';
+import BackArrow from '../../../Images/backarrow.js';
+import Cart from '../../../Images/cart.js';
 
 const DashboardTitle = ({history, text, textStyle, back}) => {
   return (
@@ -12,14 +12,14 @@ const DashboardTitle = ({history, text, textStyle, back}) => {
           <TouchableOpacity
             style={{flexDirection: 'row', alignItems: 'center'}}
             onPress={() => history.goBack()}>
-            <Image source={backarrow} style={{marginRight: 10}} />
-            <Text style={styles.backBtn}>પાછળ</Text>
+            <BackArrow />
+            <Text style={styles.backBtn}> પાછળ</Text>
           </TouchableOpacity>
         </View>
       ) : null}
       <View style={styles.container}>
         <Text style={styles.title}>શોપિંગ કાર્ટ</Text>
-        <Image source={cart} />
+        <Cart />
       </View>
       <View style={styles.seperator}></View>
     </React.Fragment>

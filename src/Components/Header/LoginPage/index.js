@@ -7,7 +7,7 @@ import Logo from './Logo';
 
 const Header = () => {
   return (
-    <View style={{zIndex: -1}}>
+    <View>
       <BackgroundEllipse />
       <Human />
       <Title />

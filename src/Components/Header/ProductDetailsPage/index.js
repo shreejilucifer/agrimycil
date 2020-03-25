@@ -3,7 +3,7 @@ import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 
 import BackgroundEllipse from './BackgroundEllipse';
 import logo from '../../../Images/logo.png';
-import backarrow from '../../../Images/backarrow.png';
+import BackArrow from '../../../Images/backarrow.js';
 
 const Header = ({history, image, productName}) => {
   return (
@@ -21,8 +21,8 @@ const Header = ({history, image, productName}) => {
           marginRight: 20,
         }}
         onPress={() => history.goBack()}>
-        <Image source={backarrow} style={{marginRight: 10}} />
-        <Text style={styles.backBtn}>પાછળ</Text>
+        <BackArrow />
+        <Text style={styles.backBtn}> પાછળ</Text>
       </TouchableOpacity>
       <View style={styles.humanContainer}>
         <Image source={image} />
