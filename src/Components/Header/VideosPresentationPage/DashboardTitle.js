@@ -1,29 +1,23 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 import {withRouter} from 'react-router-native';
-import BackArrow from '../../Images/backarrow.js';
+import BackArrow from '../../../Images/backarrow.js';
 
-const DashboardTitle = ({history, text, textStyle, back}) => {
+const DashboardTitle = ({history, textStyle}) => {
   return (
     <React.Fragment>
       <View style={styles.container}>
-        <Text style={[styles.title, textStyle]}>{text}</Text>
+        <Text style={[styles.title, textStyle]}>વીડિયો અને રજુઆતો</Text>
       </View>
-      {back ? (
-        <View style={styles.controlsContainer}>
-          <TouchableOpacity
-            style={{flexDirection: 'row', alignItems: 'center'}}
-            onPress={() => history.goBack()}>
-            <BackArrow />
-            <Text style={styles.backBtn}>પાછળ</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={{marginLeft: 20, flexDirection: 'row', alignItems: 'center'}}
-            onPress={() => history.push('/shopping-cart')}>
-            <Text style={styles.backBtn}>શોપિંગ કાર્ટ</Text>
-          </TouchableOpacity>
-        </View>
-      ) : null}
+
+      <View style={styles.controlsContainer}>
+        <TouchableOpacity
+          style={{flexDirection: 'row', alignItems: 'center'}}
+          onPress={() => history.goBack()}>
+          <BackArrow />
+          <Text style={styles.backBtn}> પાછળ</Text>
+        </TouchableOpacity>
+      </View>
       <View style={styles.seperator}></View>
     </React.Fragment>
   );
