@@ -8,9 +8,10 @@ import ProductsPage from '../Pages/ProductsPage';
 import ProductDetailsPage from '../Pages/ProductDetailsPage';
 import ShoppingCartPage from '../Pages/ShoppingCartPage';
 import VideosPresentationPage from '../Pages/VideosPresentationPage';
+import QuestionAnswerPage from '../Pages/QuestionAnswerPage';
 
 const Router = () => (
-  <NativeRouter initialEntries={['/dashboard']}>
+  <NativeRouter initialEntries={['/']}>
     <React.Fragment>
       <Route exact path="/" component={LoginPage} />
       <Route path="/crop-selection" component={CropSelectionPage} />
@@ -19,6 +20,7 @@ const Router = () => (
       <Route path="/product-details/:pid" component={ProductDetailsPage} />
       <Route path="/shopping-cart" component={ShoppingCartPage} />
       <Route path="/videos-presentation" component={VideosPresentationPage} />
+      <Route path="/questions" component={QuestionAnswerPage} />
     </React.Fragment>
   </NativeRouter>
 );
